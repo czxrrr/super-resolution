@@ -3,7 +3,7 @@
 %after this we will use New edge-directed interpolation to deal with the
 %sharp area.
 [height,width,~]=size(img);
-simg=zeros(189*2,201*2,3);
+simg=zeros(height*2,width*2,3);
 for i=1:height
     for j=1:width
         for k=1:3
