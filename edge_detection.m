@@ -8,7 +8,6 @@ sharp = edge(I,'canny');
 figure;
 imshow(sharp)
 
-%% another method proposed in the paper
 
 
 

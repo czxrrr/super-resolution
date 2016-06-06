@@ -1,13 +1,13 @@
 %% edge-directed interpolation for sharp areas
 
-m=4;
+m=5;
 y=zeros(m^2,1); % m^2 * 1
 C=zeros(m^2,4);   % m^2 * 4
 
 %% step 1  reconstruct the points with the form of (2*i+1,2*j+1)
 for k=1:3  % 3 colors
-    for i=3:height-3
-        for j=3:width-3
+    for i=4:height-4
+        for j=4:width-4
             if(sharp(i,j)==1)
                 temp=1;
                 for ii=(i+1-ceil(m/2)):(i+floor(m/2))
@@ -32,8 +32,8 @@ end
 
 %% step 2 reconstructed the points with the forms of (2*i+1,2*j)
 for k=1:3  % 3 colors
-    for i=2:height-4
-        for j=2:width-4
+    for i=4:height-4
+        for j=4:width-4
             if(sharp(i,j)==1)
                 temp=1;
                 for ii=(i+1-ceil(m/2)):(i+floor(m/2))
@@ -56,8 +56,8 @@ end
 %% step 3 reconstructed the points with the forms of (2*i,2*j+1)
 
 for k=1:3  % 3 colors
-    for i=2:height-4
-        for j=2:width-4
+    for i=4:height-4
+        for j=4:width-4
             if(sharp(i,j)==1)
                 temp=1;
                 for ii=(i+1-ceil(m/2)):(i+floor(m/2))
