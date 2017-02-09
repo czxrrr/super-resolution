@@ -1,4 +1,4 @@
-# super-solution
+# super-resolution
 This project aims to use edge-directed interpolation to zoom in pictures.
 There are 2 approaches to do the inpterpolation.
 1 bilinear interpolation for the smooth area.
